@@ -1,6 +1,6 @@
 {
   "name": "ts-class-decorators",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript decorator class meta",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -9,6 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/xikakera/ts-class-decorators.git"
   },
+  "keywords": [
+    "typescript",
+    "decorator"
+  ],
   "scripts": {
     "test": "node dist/example/DecoratorUtil.js"
   },
