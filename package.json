@@ -2,8 +2,8 @@
   "name": "ts-class-decorators",
   "version": "1.0.0",
   "description": "Typescript decorator class meta",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "author": "xikakera <xikakera@gmail.com> (https://github.com/xikakera)",
   "repository": {
     "type": "git",
