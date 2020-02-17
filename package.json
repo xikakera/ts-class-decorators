@@ -1,0 +1,30 @@
+{
+  "name": "ts-class-decorators",
+  "version": "1.0.0",
+  "description": "Typescript decorator class meta",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "xikakera <xikakera@gmail.com> (https://github.com/xikakera)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xikakera/ts-class-decorators.git"
+  },
+  "scripts": {
+    "test": "node dist/example/DecoratorUtil.js"
+  },
+  "bugs": {
+    "url": "https://github.com/xikakera/ts-class-decorators/issues"
+  },
+  "homepage": "https://github.com/xikakera/ts-class-decorators#readme",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.7.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}
