@@ -9,6 +9,8 @@ export type MethodDecorator_hasDefault<T> = (
   value?: T
 ) => (target: any, key: string) => void;
 
+export type MethodDecorator_root = (target: any, key: string) => void;
+
 export class MethodBuilder<T = any, R = MethodDecorator<T>> {
   _val?: T;
   _paths: Meta.KeyType[] = [];
@@ -24,6 +26,8 @@ export class MethodBuilder<T = any, R = MethodDecorator<T>> {
   } = {
     type: 'none'
   };
+
+  _is_key_value: boolean = false;
 
   _setType: 'set' | 'assign' | 'array desc' | 'array asc' = 'set';
 
@@ -76,13 +80,23 @@ export class MethodBuilder<T = any, R = MethodDecorator<T>> {
     return this as any;
   }
 
+  key(): MethodBuilder<string, MethodDecorator_root> {
+    this.defaultValueFunc(((c: any, name: string) => name) as any);
+    this._is_key_value = true;
+    return this as any;
+  }
+
   func(fn: this['_fns'][0]) {
     this._fns.push(fn);
     return this;
   }
 
   make(): R {
-    return this.makeDecorator();
+    const dec = this.makeDecorator();
+    if (this._is_key_value) {
+      return dec();
+    }
+    return dec;
   }
 
   protected makeDecorator(): any {

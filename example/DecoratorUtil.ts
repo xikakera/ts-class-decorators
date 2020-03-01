@@ -41,6 +41,17 @@ namespace tclassutil {
       })
       .make();
 
+    export const key = util
+      .method('methods', 'keys')
+      .arrayAsc()
+      .key()
+      .make();
+
+    export const keyOne = util
+      .method('testkey')
+      .key()
+      .make();
+
     export const override = util
       .method<boolean>('override', '{key}')
       .value(true)
@@ -99,6 +110,19 @@ class t {
   // }
   @tclassutil.Method.fn('test')
   test() {}
+
+  @tclassutil.Method.key
+  key1() {
+    //
+  }
+
+  @tclassutil.Method.key
+  key2() {
+    //
+  }
+
+  @tclassutil.Method.keyOne
+  testKeyOne_method() {}
 
   // "test": {
   //   "test": "test",
