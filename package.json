@@ -1,6 +1,6 @@
 {
   "name": "ts-class-decorators",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Typescript decorator class meta",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
